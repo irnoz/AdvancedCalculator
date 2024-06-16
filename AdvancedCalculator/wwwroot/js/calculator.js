@@ -3,10 +3,9 @@ $(document).ready(function() {
     $(".calc-button").click(function() {
         var value = $(this).text();
         var expressionField = $("#expression");
-
-        // If sin() or cos() is clicked, add it with parentheses
+        
         if (value === "sin()" || value === "cos()") {
-            expressionField.val(expressionField.val() + value.slice(0, -1) + "()");
+            expressionField.val(expressionField.val() + value.slice(0, -1));
         } else {
             expressionField.val(expressionField.val() + value);
         }
@@ -36,4 +35,9 @@ $(document).ready(function() {
         history.push({ expression: expression, result: result, timestamp: new Date().toLocaleString() });
         localStorage.setItem('calcHistory', JSON.stringify(history));
     }
+
+    $("#deleteButton").click(function() {
+        $("#expression").val('');
+        $("#result").text('Result:');
+    });
 });
