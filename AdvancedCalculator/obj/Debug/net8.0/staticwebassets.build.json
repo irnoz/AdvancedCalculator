@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p9tcOCuqlecOuEXI0JBQVk6YwzELFtsL+YZ8VKnpux4=",
+  "Hash": "MNiY3uE9cj7spS40Od5n6m3NFylqr0h9uxmcWux5884=",
   "Source": "AdvancedCalculator",
   "BasePath": "_content/AdvancedCalculator",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/noza/iliauni/aspNet/AdvancedCalculator/AdvancedCalculator/wwwroot/js/calculator.js",
+      "SourceId": "AdvancedCalculator",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/noza/iliauni/aspNet/AdvancedCalculator/AdvancedCalculator/wwwroot/",
+      "BasePath": "_content/AdvancedCalculator",
+      "RelativePath": "js/calculator.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/calculator.js"
     },
     {
       "Identity": "/Users/noza/iliauni/aspNet/AdvancedCalculator/AdvancedCalculator/wwwroot/js/history.js",

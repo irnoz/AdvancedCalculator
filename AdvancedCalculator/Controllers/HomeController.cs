@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using System.Threading.Tasks;
 using AdvancedCalculator.Models;
+using System;
 
 namespace AdvancedCalculator.Controllers
 {
@@ -22,15 +23,16 @@ namespace AdvancedCalculator.Controllers
         [HttpPost]
         public async Task<IActionResult> Calculate([FromBody] CalculationRequest request)
         {
-            if (string.IsNullOrEmpty(request.Expression))
+            var client = _clientFactory.CreateClient();
+            var response = await client.GetAsync($"https://api.mathjs.org/v4/?expr={Uri.EscapeDataString(request.Expression)}");
+
+            if (response.IsSuccessStatusCode)
             {
-                return BadRequest("Expression cannot be empty.");
+                var result = await response.Content.ReadAsStringAsync();
+                return Json(new { result });
             }
 
-            var client = _clientFactory.CreateClient();
-            var response = await client.GetStringAsync($"https://api.mathjs.org/v4/?expr={System.Net.WebUtility.UrlEncode(request.Expression)}");
-
-            return Ok(response);
+            return BadRequest();
         }
 
         public IActionResult History()

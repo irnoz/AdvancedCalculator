@@ -1,28 +1,47 @@
 @{
-    ViewData["Title"] = "Calculation History";
+    ViewData["Title"] = "History";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="top-left-buttons">
     <a href="/" class="button">Back to Calculator</a>
 </div>
 
-<div class="scrollable-table">
-    <h1>Calculation History</h1>
-
-    <table id="historyTable">
-        <thead>
-            <tr>
-                <th>Timestamp</th>
-                <th>Expression</th>
-                <th>Result</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+<div class="container">
+    <h2>Calculation History</h2>
+    <div class="history-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Expression</th>
+                    <th>Result</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody id="historyTableBody">
+                <!-- History items will be appended here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
 </div>
 
 @section Scripts {
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="~/js/history.js"></script>
+    <script>
+        $(document).ready(function() {
+            var history = localStorage.getItem('calcHistory') ? JSON.parse(localStorage.getItem('calcHistory')) : [];
+
+            // Reverse the history array to show the latest calculations on top
+            history.reverse();
+
+            var historyTableBody = $('#historyTableBody');
+            history.forEach(function(item) {
+                var row = '<tr>' +
+                    '<td>' + item.expression + '</td>' +
+                    '<td>' + item.result + '</td>' +
+                    '<td>' + item.timestamp + '</td>' +
+                    '</tr>';
+                historyTableBody.append(row);
+            });
+        });
+    </script>
 }

@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Advanced Calculator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="top-right-buttons">
@@ -9,17 +10,44 @@
 <div class="container">
     <h1>Advanced Calculator</h1>
 
-    <form id="calculatorForm">
-        <label for="expression">Enter Expression:</label>
-        <input type="text" id="expression" name="expression" required />
-        <button type="submit">Calculate</button>
+    <form id="calcForm">
+        <div class="input-group">
+            <input type="text" id="expression" name="expression" placeholder="Enter expression" />
+            <button type="submit">Calculate</button>
+        </div>
     </form>
 
-    <h2>Result</h2>
     <div id="result"></div>
+
+    <div class="button-grid">
+        <!-- Digits -->
+        <button type="button" class="calc-button">7</button>
+        <button type="button" class="calc-button">8</button>
+        <button type="button" class="calc-button">9</button>
+        <button type="button" class="calc-button">/</button>
+
+        <button type="button" class="calc-button">4</button>
+        <button type="button" class="calc-button">5</button>
+        <button type="button" class="calc-button">6</button>
+        <button type="button" class="calc-button">*</button>
+
+        <button type="button" class="calc-button">1</button>
+        <button type="button" class="calc-button">2</button>
+        <button type="button" class="calc-button">3</button>
+        <button type="button" class="calc-button">-</button>
+
+        <button type="button" class="calc-button">0</button>
+        <button type="button" class="calc-button">(</button>
+        <button type="button" class="calc-button">)</button>
+        <button type="button" class="calc-button">+</button>
+
+        <!-- Expressions -->
+        <button type="button" class="calc-button">^</button>
+        <button type="button" class="calc-button">sin()</button>
+        <button type="button" class="calc-button">cos()</button>
+    </div>
 </div>
 
 @section Scripts {
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="~/js/site.js"></script>
+    <script src="~/js/calculator.js"></script>
 }

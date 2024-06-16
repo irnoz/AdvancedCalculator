@@ -28,3 +28,4 @@
 /Users/noza/iliauni/aspNet/AdvancedCalculator/AdvancedCalculator/obj/Debug/net8.0/AdvancedCalculator.pdb
 /Users/noza/iliauni/aspNet/AdvancedCalculator/AdvancedCalculator/obj/Debug/net8.0/AdvancedCalculator.genruntimeconfig.cache
 /Users/noza/iliauni/aspNet/AdvancedCalculator/AdvancedCalculator/obj/Debug/net8.0/ref/AdvancedCalculator.dll
+/Users/noza/iliauni/aspNet/AdvancedCalculator/AdvancedCalculator/obj/Debug/net8.0/AdvancedCalculator.sourcelink.json

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/noza/iliauni/aspNet/AdvancedCalculator/AdvancedCalculator/wwwroot/js/calculator.js",
+      "PackagePath": "staticwebassets/js/calculator.js"
+    },
+    {
       "Id": "/Users/noza/iliauni/aspNet/AdvancedCalculator/AdvancedCalculator/wwwroot/js/history.js",
       "PackagePath": "staticwebassets/js/history.js"
     },
