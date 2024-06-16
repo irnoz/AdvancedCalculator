@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Advanced Calculator";
+}
+
+<div class="top-right-buttons">
+    <a href="/Home/History" class="button">Show History</a>
+</div>
+
+<div class="container">
+    <h1>Advanced Calculator</h1>
+
+    <form id="calculatorForm">
+        <label for="expression">Enter Expression:</label>
+        <input type="text" id="expression" name="expression" required />
+        <button type="submit">Calculate</button>
+    </form>
+
+    <h2>Result</h2>
+    <div id="result"></div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/site.js"></script>
+}

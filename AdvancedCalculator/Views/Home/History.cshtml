@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Calculation History";
+}
+
+<div class="top-left-buttons">
+    <a href="/" class="button">Back to Calculator</a>
+</div>
+
+<div class="scrollable-table">
+    <h1>Calculation History</h1>
+
+    <table id="historyTable">
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Expression</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/history.js"></script>
+}
